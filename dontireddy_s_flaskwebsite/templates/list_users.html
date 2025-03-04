@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body style="margin: 0px;">
+    <h1>Baking Contest Users</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Phone Number</td>
+                <td>Security Level</td>
+                <td>Password</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row['name'] }}</td>
+                <td>{{ row['age'] }}</td>
+                <td>{{ row['phone_number'] }}</td>
+                <td>{{ row['security_level'] }}</td>
+                <td>{{ row['password'] }}</td> 
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Go back to home page</a>
+</body>
+</html>

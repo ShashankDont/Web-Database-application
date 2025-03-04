@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body data-gr-c-s-loaded="true" style="margin: 0px;">
+    <h1>Baking Contest Results</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Entry ID</td>
+                <td>User ID</td>
+                <td>Baking Item</td>
+                <td>Excellent Votes</td>
+                <td>OK Votes</td>
+                <td>Bad Votes</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row['entry_id'] }}</td>
+                <td>{{ row['user_id'] }}</td>
+                <td>{{ row['baking_item'] }}</td>
+                <td>{{ row['num_excellent_votes'] }}</td>
+                <td>{{ row['num_ok_votes'] }}</td>
+                <td>{{ row['num_bad_votes'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Go back to home page</a>
+</body>
+</html>

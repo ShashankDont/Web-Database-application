@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body data-gr-c-s-loaded="true" style="margin: 0px;">
+    <h3>Add a New Baking Contest User</h3>
+    <form action="{{ url_for('add_user') }}" method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name"><br>
+
+        <label>Age:</label><br>
+        <input type="number" name="age" min="1" max="120"><br>
+
+        <label>Phone Number:</label><br>
+        <input type="tel" name="phone_number"><br>
+
+        <label>Security Level (1-3):</label><br>
+        <input type="number" name="security_level" min="1" max="3"><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="password"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/">Go back to home page</a>
+</body>
+</html>
